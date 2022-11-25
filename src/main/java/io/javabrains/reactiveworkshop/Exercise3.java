@@ -9,10 +9,16 @@ public class Exercise3 {
 
         // Use ReactiveSources.intNumbersFlux()
 
+        //Asynchronous subscription
+        ReactiveSources.intNumbersFlux()
+                .subscribe(num -> System.out.println(num));
+
         // Get all numbers in the ReactiveSources.intNumbersFlux stream
         // into a List and print the list and its size
+
+        // Synchronous subscription
         List<Integer> numbers = ReactiveSources.intNumbersFlux()
-                .toStream()
+                .toStream() // Blocking operation
                 .toList();
 
         System.out.println("Numbers is " + numbers);
