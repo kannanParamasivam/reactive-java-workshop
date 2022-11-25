@@ -9,7 +9,7 @@ public class Exercise1 {
         System.out.println("Print all numbers in the intNumbersStream stream");
         StreamSources.intNumbersStream().forEach(number -> System.out.println(number));
 
-        System.out.println("Print numbers from intNumbersStream that are less than 5");
+        System.out.println("Print numbers from intNumbersStream that are greater than 5");
         StreamSources.intNumbersStream().filter(number -> number > 5).forEach(number -> System.out.println(number));
 
         System.out.println("Print the second and third numbers in intNumbersStream that's greater than 5");
