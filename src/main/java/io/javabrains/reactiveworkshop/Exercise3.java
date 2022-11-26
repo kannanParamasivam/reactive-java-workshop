@@ -18,6 +18,7 @@ public class Exercise3 {
 
         // Synchronous subscription
         List<Integer> numbers = ReactiveSources.intNumbersFlux()
+                .log() //Logs the stream flow. Useful when debugging
                 .toStream() // Blocking operation
                 .toList();
 
